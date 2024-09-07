@@ -5,10 +5,10 @@ import App from './components/App';
 import { Provider } from 'react-redux';
 import { createStore, applyMiddleware } from 'redux';
 import reducers from './reducers';
-import reduxThunk from 'redux-thunk';
+import { thunk } from 'redux-thunk';
 
 
-const store = createStore(reducers, {}, applyMiddleware(reduxThunk));
+const store = createStore(reducers, {}, applyMiddleware(thunk));
 
 const el = document.getElementById("root");
 const root = ReactDOM.createRoot(el);
